@@ -17,7 +17,7 @@ def banner():
 {re} ╩ {cy}└─┘┴─┘└─┘{re}╚═╝  ╚═╝{cy}└─┘┴└─┴ ┴┴  └─┘┴└─
 
             version : 3.1
-        youtube.com/theunknon
+        youtube.com/samuelodu
         """)
 
 cpass = configparser.RawConfigParser()
@@ -34,12 +34,7 @@ except KeyError:
     print(re+"[!] run python3 setup.py first !!\n")
     sys.exit(1)
 
-client.connect()
-if not client.is_user_authorized():
-    client.send_code_request(phone)
-    os.system('clear')
-    banner()
-    client.sign_in(phone, input(gr+'[+] Enter the code: '+re))
+
  
 os.system('clear')
 banner()
